@@ -42,7 +42,7 @@ The thermal simulations used the same simplified Vib-Iso geometry from the mecha
 The stationary thermal simulation including the copper braid shows a smooth temperature gradient along the ribbon length, with heat conducted from the 100 mK boundary toward the 4 mK thermal anchor. The lower regions of the structure approach the colder temperature, indicating that the copper braid provides an efficient conductive pathway. The time-dependent (24-hour) thermal simulation illustrates how the structure cools over time, with the cooling front propagating from the colder boundary upward through the ribbon supports.
 
 {% include image-gallery.html images="sims_therm_results5.png" height="300" %}
-<span style="font-size: 10px">Without Braid (Time-Dependent, Stationary) & With Braid (Time-Dependent, Stationary)</span>
+<span style="font-size: 10px">From left to right: Time-dependent (without braid), Stationary (without braid), Time-dependent (with braid), Stationary (with braid)</span>
 
 These studies also proved that the inclusion of a copper braid allowed the system to cool significantly faster and to lower final temperatures. Without the braid, heat dissipation relies solely on conduction through the ribbon supports, resulting in less effective cooling.
 
