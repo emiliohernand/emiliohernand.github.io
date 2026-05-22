@@ -22,13 +22,14 @@ The frequency study began with a simplified SolidWorks model of the structure, p
 ### Results
 Simulations were performed for three effective ribbon lengths to examine how geometric variations affect resonance behavior, revealing that resonance frequencies shift systematically as ribbon length changes. The nominal ribbon length configuration (398.35 mm) showed lower displacement and acceleration than the shorter and longer variants (±10 mm). For each length, distinct peaks appear in the displacement response as a function of excitation frequency.
 
-{% include image-gallery.html images="sims_mech_results1.png" height="200" %}
+{% include image-gallery.html images="sims_mech_results1.png" height="300" %}
 <span style="font-size: 10px">Frequency Modes Data</span>
 
 Comparing across ribbon lengths, the extracted eigenfrequencies (first peaks) shift as the effective length is varied, demonstrating the sensitivity of the mechanical response to geometric parameters. In addition, the values extracted from the eigenmode analysis show that the 398 mm ribbon length exhibits the least displacement and acceleration of the three configurations.
 
 {% include image-gallery.html images="sims_mech_results2.png" height="300" %}
 
+---
 ## Thermal Dissipation Studies
 
 ### Objective:
