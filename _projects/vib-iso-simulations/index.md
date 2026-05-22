@@ -30,8 +30,6 @@ Comparing across ribbon lengths, the extracted eigenfrequencies (first peaks) sh
 {% include image-gallery.html images="sims_mech_results2.png" height="300" %}
 
 ---
-
----
 ## Thermal Dissipation Studies
 
 ### Objective:
