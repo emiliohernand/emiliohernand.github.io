@@ -16,7 +16,7 @@ This project used COMSOL Multiphysics to perform a frequency-domain mechanical a
 
 ### Model Setup:
 The frequency study began with a simplified SolidWorks model of the structure, preserving the primary support features and ribbon geometry while omitting unnecessary details to improve simulation efficiency. Copper material properties were assigned using COMSOL’s built-in library, boundary conditions and loads were applied to represent operating constraints, and a refined mesh was used to balance accuracy and computation time.
-{% include image-gallery.html images="sims_mech_model.png" height="400" %}
+{% include image-gallery.html images="sims_mech_model.png" height="300" %}
 <span style="font-size: 10px">Original model vs. simplified redesign</span>
 
 ### Results
