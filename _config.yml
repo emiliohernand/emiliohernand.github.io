@@ -15,10 +15,7 @@ title: Engineering Portfolio | Emilio Hernandez-Martinez # This is what shows up
 name: Emilio Hernandez-Martinez
 headline: Mechanical Engineering Student at the University of Michigan
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Mechanical engineering student developing technical experience through research engineering, 
-  simulation studies, and mechanical design projects. This portfolio highlights work spanning 
-  cryogenic vibration isolation systems, CAD development, engineering analysis, and competition 
-  robotics mechanisms.
+  University student developing technical experience through research engineering, simulation studies, and mechanical design projects. This website highlights work spanning cryogenic vibration isolation systems, CAD development, engineering analysis, and competition robotics mechanisms.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
