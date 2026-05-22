@@ -5,7 +5,7 @@ description: Developed COMSOL Multiphysics models to evaluate the mechanical vib
 skills: 
 - COMSOL Multiphysics
 - Mechanical Data Analyis
-main-image: /sims_main1.png
+main-image: /sims_main2.png
 ---
 
 ---
@@ -41,8 +41,7 @@ The thermal simulations used the same simplified Vib-Iso geometry from the mecha
 ### Results:
 The stationary thermal simulation including the copper braid shows a smooth temperature gradient along the ribbon length, with heat conducted from the 100 mK boundary toward the 4 mK thermal anchor. The lower regions of the structure approach the colder temperature, indicating that the copper braid provides an efficient conductive pathway. The time-dependent thermal simulation illustrates how the structure cools over time, with the cooling front propagating from the colder boundary upward through the ribbon supports.
 
-{% include image-gallery.html images="sims_therm_results1.png" height="300" %}
-{% include image-gallery.html images="sims_therm_results2.png" height="300" %}
+{% include image-gallery.html images="sims_therm_results4.png" height="300" %}
 
 These studies also proved that the inclusion of a copper braid allowed the system to cool significantly faster and to lower final temperatures. Without the braid, heat dissipation relies solely on conduction through the ribbon supports, resulting in less effective cooling.
 
