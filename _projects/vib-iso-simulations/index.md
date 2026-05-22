@@ -5,7 +5,7 @@ description: Developed COMSOL Multiphysics models to evaluate the mechanical vib
 skills: 
 - COMSOL Multiphysics
 - Mechanical Data Analyis
-main-image: /sims_main2.png
+main-image: /sims_main3.png
 ---
 
 ---
@@ -39,9 +39,10 @@ Much like the refrigerator’s sensitivity to mechanical vibrations, inefficienc
 The thermal simulations used the same simplified Vib-Iso geometry from the mechanical studies, with the addition of a copper braid to evaluate its effect on heat transfer. Idealized cryogenic boundary conditions were applied to represent thermal connections to the dilution refrigerator stages, while all other surfaces were treated as insulated so heat transfer occurred only through conduction. Simulations were performed both with and without the copper braid, using stationary and time-dependent analyses to compare steady-state thermal behavior and cooldown performance. Radiative and convective heat transfer, as well as contact resistance effects, were excluded to reflect high-vacuum cryogenic operating conditions.
 
 ### Results:
-The stationary thermal simulation including the copper braid shows a smooth temperature gradient along the ribbon length, with heat conducted from the 100 mK boundary toward the 4 mK thermal anchor. The lower regions of the structure approach the colder temperature, indicating that the copper braid provides an efficient conductive pathway. The time-dependent thermal simulation illustrates how the structure cools over time, with the cooling front propagating from the colder boundary upward through the ribbon supports.
+The stationary thermal simulation including the copper braid shows a smooth temperature gradient along the ribbon length, with heat conducted from the 100 mK boundary toward the 4 mK thermal anchor. The lower regions of the structure approach the colder temperature, indicating that the copper braid provides an efficient conductive pathway. The time-dependent (24-hour) thermal simulation illustrates how the structure cools over time, with the cooling front propagating from the colder boundary upward through the ribbon supports.
 
-{% include image-gallery.html images="sims_therm_results4.png" height="300" %}
+{% include image-gallery.html images="sims_therm_results5.png" height="300" %}
+<span style="font-size: 10px">Without Braid (Time-Dependent, Stationary) & With Braid (Time-Dependent, Stationary)</span>
 
 These studies also proved that the inclusion of a copper braid allowed the system to cool significantly faster and to lower final temperatures. Without the braid, heat dissipation relies solely on conduction through the ribbon supports, resulting in less effective cooling.
 
