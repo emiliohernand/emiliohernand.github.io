@@ -15,7 +15,7 @@ Simplifications made during simulation were revisited and adjusted where necessa
 - Reintroducing full paired clamp design (body + cap)
 - Updating curved ribbon geometry to preserve line of sight for mounted optical components.
 
-{% include image-gallery.html images="sims_mech_model.png" height="300" %}
+{% include image-gallery.html images="drawings1.png" height="300" %}
 <span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
 
 Initial drawings were reviewed and revised to address issues related to fit, alignment, and manufacturability, with feedback from lab members guiding successive refinements.
@@ -24,11 +24,12 @@ Initial drawings were reviewed and revised to address issues related to fit, ali
 ## Drawings and Specifications
 All components of the Vib-Iso were designed for oxygen-free high-conductivity (OFHC) copper manufacturing, selected for its excellent thermal conductivity and mechanical integrity, eliminating the need for additional surface treatment or coatings. The engineering drawings define fully dimensioned geometries in millimeters and include standard manufacturing notes, such as depth of drilling and isometric angles for clarity.
 
-{% include image-gallery.html images="sims_mech_model.png" height="300" %}
+{% include image-gallery.html images="drawings2.png" height="500" %}
 <span style="font-size: 10px">Full engineering drawing set</span>
 
 Across all parts, the specifications prioritize clear definition of geometry and interfaces to ensure manufacturability and compatibility within the larger Vib-Iso assembly, while remaining consistent with the mechanical and thermal requirements.
 
+---
 ## Challenges and Solutions
 While the underlying geometry of the Vib-Iso components was straightforward in a CAD environment, translating that geometry into drawings required careful attention to detail. One recurring difficulty was representing internal features that are not visible from external views, such as drilled and tapped holes. This required the use of section views and hidden lines to ensure that critical features were fully defined without ambiguity.
 
