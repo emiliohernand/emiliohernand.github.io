@@ -5,7 +5,7 @@ description: Translated simulation data and conclusions into fabrication-ready h
 skills: 
 - SolidWorks
 - Technical Drawings
-main-image: /drawings_main.png
+main-image: /drawings_main1.png
 ---
 
 ---
@@ -24,8 +24,7 @@ Initial drawings were reviewed and revised to address issues related to fit, ali
 ## Drawings and Specifications
 All components of the Vib-Iso were designed for oxygen-free high-conductivity (OFHC) copper manufacturing, selected for its excellent thermal conductivity and mechanical integrity, eliminating the need for additional surface treatment or coatings. The engineering drawings define fully dimensioned geometries in millimeters and include standard manufacturing notes, such as depth of drilling and isometric angles for clarity.
 
-{% include image-gallery.html images="drawings3.png" height="700" %}
-<span style="font-size: 10px">Full engineering drawing set</span>
+{% include image-gallery.html images="drawings3.png" height="1200" %}
 
 Across all parts, the specifications prioritize clear definition of geometry and interfaces to ensure manufacturability and compatibility within the larger Vib-Iso assembly, while remaining consistent with the mechanical and thermal requirements.
 
