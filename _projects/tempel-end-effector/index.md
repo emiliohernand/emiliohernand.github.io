@@ -1,7 +1,7 @@
 ---
 layout: post
 title: COMETS 2025 “Tempel” Differential End Effector Subsystem
-description: Designed a competition robotics end effector featuring an integrated differential gearbox for independent wrist and intake wheel control. Iterative development focused on game piece handling performance, drivetrain packaging, weight distribution, and subsystem integration.
+description: Designed a competition robotics end effector featuring an integrated differential gearbox for independent wrist and intake wheel control. Iterative development focused on perfecting game piece manipulation, weight distribution, and cross-system integration.
 skills: 
 - SolidWorks
 - Differential Gearbox Design
@@ -12,7 +12,7 @@ main-image: /project.webp
 ## Design Overview
 
 ### Objective:
-Designed a compact robotic end effector capable of independently rotating a wrist mechanism while simultaneously controlling intake flywheel motion for manipulation of cylindrical game pieces in FIRST Robotics competition gameplay.
+Design and manufacture a compact end effector capable of independently rotating a wrist mechanism and controlling intake flywheel spin.
 
 ### Key Components:
 - Differential bevel gearbox
