@@ -11,8 +11,7 @@ main-image: /project.webp
 ---
 ## Design Overview
 
-### Objective:
-Design and manufacture a compact end effector capable of independently rotating a wrist mechanism and controlling intake flywheel spin.
+### Objective: Design and manufacture a compact end effector capable of independently rotating a wrist mechanism and controlling intake flywheel spin.
 
 ### Key Components:
 - Differential bevel gearbox
