@@ -26,7 +26,7 @@ main-image: /project.webp
 - Implementing a modular assembly approach was necessary for quick repair in competition setting
 - Balancing rigidity, packaging constraints, and rotational freedom required several system revisions
 
-### Output:
+### Final Output:
 The completed end effector operated as a highly effective and dependable subsystem, providing stable game piece control, reliable wrist positioning, and consistent performance throughout competition use.
 
 ---
