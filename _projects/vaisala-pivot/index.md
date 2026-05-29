@@ -37,14 +37,29 @@ The completed pivot subsystem proved to be a highly reliable and durable mechani
 ### Side Gear Plates:
 Large quarter-circle gear plates provide the main rotational interface for the structure. They were manufactured from 0.25” polycarbonate rather than aluminum to better absorb impacts and flex under load instead of cracking from internal stress. This material choice proved highly durable during competition, as the plates withstood repeated impacts without failure. Special attention was also given to the CNC manufacturing process to ensure the large gear teeth were cut cleanly across multiple machining passes.
 
+{% include image-gallery.html images="drawings1.png" height="300" %}
+<span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
+
 ### Adjustable Chain Drivetrain:
 The pivot subsystem is powered by a chain drivetrain designed around an adjustable tensioning system to ensure reliable operation through wearing over time. An estimated sprocket spacing was implemented, while a smaller adjustable sprocket mounted to the side was incorporated to push against the chain and maintain proper tension. This approach simplified manufacturing tolerances while allowing the drivetrain to be tuned and serviced easily in competition.
+
+{% include image-gallery.html images="drawings1.png" height="300" %}
+<span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
 
 ### Aluminum Mounting Plates:
 The pivot structure is supported by thick CNC-machined aluminum mounting plates that provide rigidity while connecting the drivetrain to the robot’s shooting deck assembly. The plates were lightweighted in CAD prior to manufacturing to reduce overall mass while still maintaining the necessary stiffness.
 
+{% include image-gallery.html images="drawings1.png" height="300" %}
+<span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
+
 ### Pinion Gear Subassembly:
 Custom pinion gears engage with the side gear plates to rotate the pivot, controlling the angle of the shooting deck. Although the custom pinion gears themselves were designed by another team member, the surrounding drivetrain integration and the manufacturing of the pinion gears were central aspects of the development process.
 
+{% include image-gallery.html images="drawings1.png" height="300" %}
+<span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
+
 ### Limelight Camera and Nameplate:
 The front of the structure features both a Limelight vision camera and a custom robot nameplate. The camera provides targeting and odometry data used by the robot’s software to automatically shift launch angles during gameplay. The decorative nameplate displays the robot’s name in the team’s classic Space Age font, showcasing our team spirit and passion for aesthetic design.
+
+{% include image-gallery.html images="drawings1.png" height="300" %}
+<span style="font-size: 10px">Simplified COMSOL model vs. new detailed model</span>
