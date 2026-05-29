@@ -27,7 +27,7 @@ main-image: /project.webp
 - Balancing rigidity, packaging constraints, and rotational freedom required several system revisions
 
 ### Output:
-Final subsystem integrated a compact differential drivetrain, independently actuated wrist mechanism, and optimized intake geometry into a competition-ready assembly.
+The completed end effector operated as a highly effective and dependable subsystem, providing stable game piece control, reliable wrist positioning, and consistent performance throughout competition use.
 
 ---
 ## Component Breakdowns
