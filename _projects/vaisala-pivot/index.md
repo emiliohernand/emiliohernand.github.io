@@ -11,7 +11,8 @@ main-image: /project.webp
 ---
 ## Design Overview
 
-### Objective: Design and manufacture a durable pivot mechanism for controlling the angle of the robot’s shooting deck capable of withstanding strong impacts and high mechanical load.
+### Objective:
+Design and manufacture a durable pivot mechanism for controlling the angle of the robot’s shooting deck capable of withstanding strong impacts and high mechanical load.
 
 ### Key Components:
 - Side gear plates
