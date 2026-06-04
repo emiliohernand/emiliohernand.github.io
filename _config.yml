@@ -29,8 +29,8 @@ resume-url: /assets/resume/Emilio Hernandez-Martinez - Resume.pdf
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: https://www.linkedin.com/in/emilioh26    # https://www.linkedin.com/in/{your url slug} 
-  github: https://github.com/emiliohernand    # https://github.com/{your url slug} 
+  linkedin: emilioh26    # https://www.linkedin.com/in/{your url slug} 
+  github: emiliohernand    # https://github.com/{your url slug} 
   stackoverflow:     # https://stackoverflow.com/users/{your url slug}
   medium:            # https://medium.com/@{your url slug} 
   x-twitter:   # https://x.com/{your url slug} 
