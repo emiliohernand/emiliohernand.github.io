@@ -5,7 +5,7 @@ description: Designed a chain-driven support pivot subsystem enabling dynamicall
 skills: 
 - SolidWorks
 - Adjustable Drivetrain Design
-main-image: /vaisala_main.png 
+main-image: /vaisala_cover.png 
 ---
 
 ---
@@ -27,9 +27,10 @@ Design and manufacture a durable pivot mechanism for controlling the angle of th
 - Manufacturing large gear arcs required careful multi-pass CNC machining
 - Proper planning proved essential in balancing detailed design with time constraints
 
-
 ### Final Output:
 The completed pivot subsystem proved to be a highly reliable and durable mechanism, consistently delivering accurate angle positioning and dependable performance throughout the competition season.
+
+{% include image-gallery.html images="vaisala_hero.png" height="500" %}
 
 ---
 ## Component Breakdowns
