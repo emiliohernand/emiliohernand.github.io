@@ -5,7 +5,7 @@ description: Designed a competition robotics end effector featuring an integrate
 skills: 
 - SolidWorks
 - Differential Gearbox Design
-main-image: /tempel_main.png 
+main-image: /tempel_cover.png 
 ---
 
 ---
@@ -29,6 +29,7 @@ Design and manufacture a compact end effector capable of independently rotating 
 
 ### Final Output:
 The completed end effector operated as a highly effective and dependable subsystem, providing stable game piece control, reliable wrist positioning, and consistent performance throughout competition use.
+{% include image-gallery.html images="tempel_hero.png" height="500" %}
 
 ---
 ## Component Breakdowns
