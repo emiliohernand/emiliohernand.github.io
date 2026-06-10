@@ -5,7 +5,7 @@ description: Designed a competition robotics end effector featuring an integrate
 skills: 
 - SolidWorks
 - Differential Gearbox Design
-main-image: /tempel_cover.png 
+main-image: /tempel_hero.png 
 ---
 
 ---
