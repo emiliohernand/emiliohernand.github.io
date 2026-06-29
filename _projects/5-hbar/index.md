@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HBAR Eigenmode Characterization & Device Design
-description: Developed an automated workflow for the design and characterization of High Overtone Bulk Acoustic Resonator (HBAR) devices through Hermite-Gaussian mode fitting and substrate geometry optimization.
+description: Developed an automated COMSOL-MATLAB workflow for the design and characterization of High Overtone Bulk Acoustic Resonator (HBAR) devices. The workflow identifies HBAR modes through Hermite-Gaussian distribution fitting and explores the effects of device geometry on resonant performance.
 skills: 
 - MATLAB
 - COMSOL
