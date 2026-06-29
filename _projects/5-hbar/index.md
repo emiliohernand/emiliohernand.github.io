@@ -10,58 +10,106 @@ main-image: /vaisala_cover.png
 ---
 
 ---
-## Design Overview
+## Hermite-Gaussian Mode Characterization
 
-### Objective:
-Design and manufacture a durable pivot mechanism for controlling the angle of the robot’s shooting deck capable of withstanding strong impacts and high mechanical load.
+### Objective
+Develop an automated framework for identifying High Overtone Bulk Acoustic Resonator (HBAR) modes from simulated mechanical eigenmodes. The goal was to replace manual inspection of COMSOL results with a repeatable classification process based on theoretical mode shapes and statistical curve fitting.
 
-### Key Components:
-- Side gear plates
-- Adjustable chain drivetrain
-- Aluminum mounting plates
-- Pinion gear subassembly
-- Limelight camera and nameplate
+### Background
+HBAR devices support a large number of closely spaced mechanical resonances, many of which are not useful operating modes. Although COMSOL can accurately calculate these eigenmodes, determining which modes exhibit true HBAR behavior traditionally requires manual inspection of displacement profiles.
 
-### Challenges and Iteration:
-- Coordinating with other robot subsystems introduced packaging and alignment constraints
-- Structural aluminum plates underwent lightweighting process to reduce overall mass
-- Manufacturing large gear arcs required careful multi-pass CNC machining
-- Proper planning proved essential in balancing detailed design with time constraints
+To eliminate this bottleneck, I developed a MATLAB-based characterization workflow capable of automatically identifying HBAR modes directly from COMSOL simulation data.
 
-### Final Output:
-The completed pivot subsystem proved to be a highly reliable and durable mechanism, consistently delivering accurate angle positioning and dependable performance throughout the competition season.
+Suggested images
+- COMSOL model of the resonator
+- Example displacement field
+- Illustration of HBAR vs. non-HBAR mode
 
-{% include image-gallery.html images="vaisala_hero.png" height="500" %}
+### Predicting Candidate Resonances
+The workflow begins by calculating the theoretical resonance frequencies associated with a specified range of longitudinal overtone numbers. These predicted frequencies serve as reference points for automated COMSOL eigenfrequency searches.
+
+Rather than searching across the entire frequency spectrum, the simulation performs localized searches around each theoretical resonance, significantly reducing computational cost while ensuring that nearby HBAR modes are captured.
+
+Suggested images
+- Flowchart
+- Plot of theoretical mode frequencies
+- COMSOL eigenfrequency study settings
+
+### Extracting Mode Profiles
+Each eigenfrequency search returns multiple mechanical eigenmodes. For every mode identified, the radial displacement profile is extracted along a cut line through the substrate.
+
+This one-dimensional displacement profile captures the transverse shape of the mechanical mode and serves as the input for the characterization algorithm implemented in MATLAB.
+
+Suggested images
+- Cut line on COMSOL model
+- Example displacement profile
+- Export process
+
+### Hermite-Gaussian Curve Fitting
+The exported displacement profile is compared against a library of theoretical transverse mode distributions, including Gaussian, Hermite-Gaussian, and Laguerre-Gaussian models.
+
+A custom nonlinear least-squares fitting routine determines the optimal amplitude, beam width, and center position for every candidate distribution. The coefficient of determination (R²) is then calculated for each fit, allowing the algorithm to identify which theoretical mode most closely matches the simulated displacement profile.
+
+This approach provides an objective method for distinguishing HBAR modes from spurious mechanical resonances while simultaneously identifying the transverse mode order.
+
+Suggested images
+- Example HG0, HG1, HG2 shapes
+- MATLAB fit overlay
+- R² comparison table
+
+### Automated HBAR Classification
+After evaluating every candidate distribution, the workflow selects the model with the highest goodness-of-fit. Modes whose best-fit R² exceeds a predefined threshold are automatically classified as HBAR candidates.
+
+Relevant information—including resonance frequency, overtone number, best-fit distribution, fitting parameters, and R² value—is compiled into a single output table for further analysis.
+
+The entire characterization process was integrated into a hierarchical MATLAB framework that interfaces directly with COMSOL through LiveLink, enabling automated simulation, data extraction, mode identification, and reporting.
+
+Suggested images
+- Workflow diagram
+- Output table
+- MATLAB console output
 
 ---
-## Component Breakdowns
+## Device Geometry Optimization
 
-### Side Gear Plates:
-Large quarter-circle gear plates provide the main rotational interface for the structure. They were manufactured from 0.25” polycarbonate rather than aluminum to better absorb impacts and flex under load instead of cracking from internal stress. This material choice proved highly durable during competition, as the plates withstood repeated impacts without failure. Special attention was also given to the CNC manufacturing process to ensure the large gear teeth were cut cleanly across multiple machining passes.
+### Objective
+Develop simulation tools to investigate how substrate geometry influences HBAR resonance behavior and identify device dimensions that improve mode confinement while maintaining practical operating frequencies.
 
-{% include image-gallery.html images="vaisala_gears.png" height="300" %}
-<span style="font-size: 10px"> </span>
+### Background
+After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance.
 
-### Adjustable Chain Drivetrain:
-The pivot subsystem is powered by a chain drivetrain designed around an adjustable tensioning system to ensure reliable operation through wearing over time. An estimated sprocket spacing was implemented, while a smaller adjustable sprocket mounted to the side was incorporated to push against the chain and maintain proper tension. This approach simplified manufacturing tolerances while allowing the drivetrain to be tuned and serviced easily in competition.
+Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical. To address this challenge, I developed a MATLAB framework capable of analyzing large parametric simulation datasets and visualizing the resulting design space.
 
-{% include image-gallery.html images="vaisala_tension.png" height="300" %}
-<span style="font-size: 10px"> </span>
+Suggested images
+- Device dimensions labeled
+- Parametric sweep illustration
 
-### Aluminum Mounting Plates:
-The pivot structure is supported by thick CNC-machined aluminum mounting plates that provide rigidity while connecting the drivetrain to the robot’s shooting deck assembly. The plates were lightweighted in CAD prior to manufacturing to reduce overall mass while still maintaining the necessary stiffness.
+### Parametric COMSOL Studies
+A series of COMSOL simulations was performed while varying key substrate dimensions across predefined ranges. For each geometry, resonance frequencies were calculated and exported for post-processing.
 
-{% include image-gallery.html images="vaisala_plates.png" height="300" %}
-<span style="font-size: 10px"> </span>
+These simulations generated a large dataset relating geometric parameters to predicted HBAR operating frequencies.
 
-### Pinion Gear Subassembly:
-Custom pinion gears engage with the side gear plates to rotate the pivot, controlling the angle of the shooting deck. Although the custom pinion gears themselves were designed by another team member, the surrounding drivetrain integration and the manufacturing of the pinion gears were central aspects of the development process.
+Suggested images
+- COMSOL parametric sweep settings
+- Geometry variations
 
-{% include image-gallery.html images="vaisala_pinion.png" height="300" %}
-<span style="font-size: 10px"> </span>
+### MATLAB Data Processing
+Custom MATLAB scripts organized the simulation results into structured datasets suitable for visualization and analysis.
 
-### Limelight Camera and Nameplate:
-The front of the structure features both a Limelight vision camera and a custom robot nameplate. The camera provides targeting and odometry data used by the robot’s software to automatically shift launch angles during gameplay. The decorative nameplate displays the robot’s name in the team’s classic Space Age font, showcasing our team spirit and passion for aesthetic design.
+Mathematical relationships between the geometric parameters and resonance frequencies were then used to identify trends throughout the design space. Automated filtering techniques were also implemented to remove unrealistic frequency regions, improving the readability of the resulting plots.
 
-{% include image-gallery.html images="vaisala_limelight.png" height="300" %}
-<span style="font-size: 10px"> </span>
+Suggested images
+- MATLAB code snippet
+- Data organization diagram
+
+### Design Space Visualization
+Processed simulation results were visualized using contour plots that map resonance frequency as a function of substrate geometry.
+
+These plots provide an intuitive method for identifying combinations of dimensions capable of supporting desired operating frequencies while simultaneously revealing regions where HBAR behavior becomes impractical.
+
+The resulting visualization tools enable rapid design exploration without requiring repeated manual inspection of individual simulations.
+
+Suggested images
+- Your frequency contour plots
+- Highlighted optimal region
+- Before/after filtering comparison
