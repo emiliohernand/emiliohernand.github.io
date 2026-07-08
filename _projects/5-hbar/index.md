@@ -19,7 +19,7 @@ Develop an automated framework for identifying High Overtone Bulk Acoustic Reson
 HBAR devices support a large number of closely spaced mechanical resonances, many of which are not useful operating modes. Although COMSOL can accurately calculate these eigenmodes, determining which modes exhibit true HBAR behavior traditionally requires manual inspection of displacement profiles.
 
 {% include image-gallery.html images="base_model.png" height="300" %}
-<span style="font-size: 10px">Base COMSOL model</span>
+<span style="font-size: 10px">Base COMSOL model (exagerated dome geometry)</span>
 
 To eliminate this bottleneck, I developed a MATLAB-based characterization workflow capable of automatically identifying HBAR modes directly from COMSOL simulation data.
 
