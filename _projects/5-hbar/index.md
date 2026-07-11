@@ -162,4 +162,4 @@ Tested (a, sag) combinations:
 All four geometric configurations produced effecitve, well-confined HBAR modes. Their displacement profiles were fitted to Hermite-Gaussian theory (same logic as above) and resulted in consistently high R² scores.
 
 {% include image-gallery.html images="config_modes.png" height="300" %}
-<span style="font-size: 10px">Example HBAR modes found for each geometric configuration</span>
+<span style="font-size: 10px">Example HBAR modes found for each geometric configuration (all 0th order)</span>
