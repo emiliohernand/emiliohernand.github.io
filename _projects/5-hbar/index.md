@@ -92,34 +92,74 @@ The beam waist (w0​) and beam radius at the dome surface (w2) can be calculate
 {% include image-gallery.html images="workflow2.png" height="300" %}
 <span style="font-size: 10px">Parameter influence path</span>
 
-To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, $ colormap graphs were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
+To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, 4 colormap graphs were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
 
-### Parametric COMSOL Studies
-A series of COMSOL simulations was performed while varying key substrate dimensions across predefined ranges. For each geometry, resonance frequencies were calculated and exported for post-processing.
+### Map 1 – Resonator Stability
+Goal: Determine which substrate geometries can theoretically support stable Gaussian HBAR modes at 4 GHz.
 
-These simulations generated a large dataset relating geometric parameters to predicted HBAR operating frequencies.
+Key Points:
+- Stable Gaussian modes require 0 < g < 1
+- White region corresponds to unstable geometries, colored region represents valid values of g
+- Red contour marks the stability boundary (g = 0)
 
-Suggested images
-- COMSOL parametric sweep settings
-- Geometry variations
+{% include image-gallery.html images="stability.png" height="300" %}
+<span style="font-size: 10px"></span>
 
-### MATLAB Data Processing
-Custom MATLAB scripts organized the simulation results into structured datasets suitable for visualization and analysis.
+Takeaway: Only geometries within the stable region are considered for further HBAR design analysis.
 
-Mathematical relationships between the geometric parameters and resonance frequencies were then used to identify trends throughout the design space. Automated filtering techniques were also implemented to remove unrealistic frequency regions, improving the readability of the resulting plots.
+### Map 2 – Valid Geometry Region
 
-Suggested images
-- MATLAB code snippet
-- Data organization diagram
+Goal: Identify substrate geometries that satisfy both stability and beam confinement requirements at 4 GHz.
 
-### Design Space Visualization
-Processed simulation results were visualized using contour plots that map resonance frequency as a function of substrate geometry.
+Key Points:
+- Only valid if 0 < g < 1 and a / w2 ≥ 3
+- Green regions satisfy both criteria simultaneously, white regions fail one or more design requirements.
 
-These plots provide an intuitive method for identifying combinations of dimensions capable of supporting desired operating frequencies while simultaneously revealing regions where HBAR behavior becomes impractical.
+{% include image-gallery.html images="valid.png" height="300" %}
+<span style="font-size: 10px"></span>
 
-The resulting visualization tools enable rapid design exploration without requiring repeated manual inspection of individual simulations.
+Takeaway: Provides a quick pass/fail assessment of candidate substrate geometries before running simulations.
 
-Suggested images
-- Your frequency contour plots
-- Highlighted optimal region
-- Before/after filtering comparison
+### Map 3 – Containment Factor Gradient
+
+Goal: Visualize how resonator stability and beam confinement jointly limit the feasible design space at 4 GHz.
+
+Key Points:
+- Colormap represents the beam containment factor (a / w2) at any given (a, sag) combination.
+- Black contour marks the containment requirement (a / w2 = 3).
+
+{% include image-gallery.html images="containment.png" height="300" %}
+<span style="font-size: 10px"></span>
+
+Takeaway: Explains why certain geometries are feasible while others fail, making it a useful design-space exploration tool.
+
+### Map 4 – Minimum Frequency for Beam Containment
+
+Goal: Determine the minimum operating frequency required for each substrate geometry to achieve beam confinement.
+
+Key Points:
+- Colormap shows the minimum frequency required to satisfy the containment criterion (a / w2 ≥ 3).
+- White region corresponds to frequencies outside the practical design range (> 20 GHz).
+
+{% include image-gallery.html images="minfreq.png" height="300" %}
+<span style="font-size: 10px"></span>
+
+Takeaway: Enables geometry design selection based on target operating frequency.
+
+### COMSOL Validation
+
+Objective: Use four representative substrate geometries for COMSOL simulations and verify that well-confined HBAR modes are found.
+
+Tested (a, sag) combinations:
+- (200, 1)
+- (300, 0.2)
+- (150, 0.5)
+- (110, 1)
+
+{% include image-gallery.html images="valid2.png" height="300" %}
+<span style="font-size: 10px"></span>
+
+All four geometric configurations produced effecitve, well-confined HBAR modes. Their displacement profiles were fitted to Hermite-Gaussian theory (same logic as above) and resulted in consistently high R² scores.
+
+{% include image-gallery.html images="config_modes.png" height="300" %}
+<span style="font-size: 10px">Example HBAR modes found for each geometric configuration</span>
