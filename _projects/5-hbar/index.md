@@ -79,10 +79,20 @@ After establishing an automated method for identifying HBAR modes, the next step
 - Aperture (a) – the half-width of the domed region
 - Sag (sag) – the height of the dome above the substrate
 
-{% include image-gallery.html images="asag_table.png" height="300" %}
+{% include image-gallery.html images="asag.png" height="300" %}
 <span style="font-size: 10px"></span>
 
-Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical. To address this challenge, I developed a MATLAB framework capable of analyzing large parametric simulation datasets and visualizing the resulting design space.
+Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical.
+
+### Theory Constraints
+For a resonator to produce stable Gaussian displacement fields, we depend on a stability range of... 0 < g < 1
+
+The beam waist (w0​) and beam radius at the dome surface (w2) can be calculated analytically. To minimize leakage, the beam must remain well confined beneath the dome. This work uses the semi-arbitrary criterion... a / w2 ≥ 3
+
+{% include image-gallery.html images="workflow2.png" height="300" %}
+<span style="font-size: 10px">Parameter influence path</span>
+
+To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, $ colormap graphs were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
 
 ### Parametric COMSOL Studies
 A series of COMSOL simulations was performed while varying key substrate dimensions across predefined ranges. For each geometry, resonance frequencies were calculated and exported for post-processing.
