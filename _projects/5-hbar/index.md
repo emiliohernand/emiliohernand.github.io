@@ -75,13 +75,14 @@ The entire characterization process was integrated into a hierarchical MATLAB fr
 Develop simulation tools to investigate how substrate geometry influences HBAR resonance behavior and identify device dimensions that improve mode confinement while maintaining practical operating frequencies.
 
 ### Background
-After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance.
+After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance. Two geometric design parameters define the dome:
+- Aperture (a) – the half-width of the domed region
+- Sag (sag) – the height of the dome above the substrate
+
+{% include image-gallery.html images="asag_table.png" height="300" %}
+<span style="font-size: 10px"></span>
 
 Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical. To address this challenge, I developed a MATLAB framework capable of analyzing large parametric simulation datasets and visualizing the resulting design space.
-
-Suggested images
-- Device dimensions labeled
-- Parametric sweep illustration
 
 ### Parametric COMSOL Studies
 A series of COMSOL simulations was performed while varying key substrate dimensions across predefined ranges. For each geometry, resonance frequencies were calculated and exported for post-processing.
