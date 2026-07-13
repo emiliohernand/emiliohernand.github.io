@@ -69,12 +69,12 @@ Relevant information—including resonance frequency, overtone number, best-fit 
 The entire characterization process was integrated into a hierarchical MATLAB framework that interfaces directly with COMSOL through LiveLink, enabling automated simulation, data extraction, mode identification, and reporting.
 
 ---
-## Device Geometry Optimization
+# Device Geometry Optimization
 
-### Objective
+## Objective
 Develop simulation tools to investigate how substrate geometry influences HBAR resonance behavior and identify device dimensions that improve mode confinement while maintaining practical operating frequencies.
 
-### Background
+## Background
 After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance. Two geometric design parameters define the dome:
 - Aperture (a) – the half-width of the domed region
 - Sag (sag) – the height of the dome above the substrate
@@ -84,7 +84,7 @@ After establishing an automated method for identifying HBAR modes, the next step
 
 Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical.
 
-### Theory Constraints
+## Theory Constraints
 For a resonator to produce stable Gaussian displacement fields, we depend on a stability range of... 0 < g < 1
 
 The beam waist (w0​) and beam radius at the dome surface (w2) can be calculated analytically. To minimize leakage, the beam must remain well confined beneath the dome. This work uses the semi-arbitrary criterion... a / w2 ≥ 3
@@ -94,7 +94,7 @@ The beam waist (w0​) and beam radius at the dome surface (w2) can be calculate
 
 To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, 4 colormap plots were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
 
-### Map 1 – Resonator Stability
+## Map 1 – Resonator Stability
 Goal: Determine which substrate geometries can theoretically support stable Gaussian HBAR modes at 4 GHz.
 
 Key Points:
@@ -107,7 +107,7 @@ Key Points:
 
 Takeaway: Only geometries within the stable region are considered for further HBAR design analysis.
 
-### Map 2 – Valid Geometry Region
+## Map 2 – Valid Geometry Region
 
 Goal: Identify substrate geometries that satisfy both stability and beam confinement requirements at 4 GHz.
 
@@ -120,7 +120,7 @@ Key Points:
 
 Takeaway: Provides a quick pass/fail assessment of candidate substrate geometries before running simulations.
 
-### Map 3 – Containment Factor Gradient
+## Map 3 – Containment Factor Gradient
 
 Goal: Visualize how resonator stability and beam confinement jointly limit the feasible design space at 4 GHz.
 
@@ -133,7 +133,7 @@ Key Points:
 
 Takeaway: Explains why certain geometries are feasible while others fail, making it a useful design-space exploration tool.
 
-### Map 4 – Minimum Frequency for Beam Containment
+## Map 4 – Minimum Frequency for Beam Containment
 
 Goal: Determine the minimum operating frequency required for each substrate geometry to achieve beam confinement.
 
@@ -146,7 +146,7 @@ Key Points:
 
 Takeaway: Enables geometry design selection based on target operating frequency.
 
-### COMSOL Validation
+## COMSOL Validation
 
 Objective: Use four representative substrate geometries for COMSOL simulations and verify that well-confined HBAR modes are found.
 
@@ -164,7 +164,7 @@ All four geometric configurations produced effecitve, well-confined HBAR modes. 
 {% include image-gallery.html images="config_modes.png" height="300" %}
 <span style="font-size: 10px">Example HBAR modes found for each geometric configuration (all 0th order)</span>
 
-### Next Steps
+## Next Steps
 The geometry optimization maps and their respective simulation tests help inform the future design of a final HBAR device to be manufactured by fellow lab members, and the characterization workflow for identifying desirable eigenmodes will enable us to couple the device with optical components at the correct wave frequecies. 
 
 By integrating COMSOL with MATLAB for automation, numerical optimization, and data visualization, the project significantly reduced manual analysis effort and accelerated the overall device design process.
