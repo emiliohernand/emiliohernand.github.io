@@ -10,12 +10,12 @@ main-image: /hbar_cover.png
 ---
 
 ---
-## Hermite-Gaussian Mode Characterization
+# Hermite-Gaussian Mode Characterization
 
-### Objective
+## Objective
 Develop an automated framework for identifying High Overtone Bulk Acoustic Resonator (HBAR) modes from simulated mechanical eigenmodes. The goal was to replace manual inspection of COMSOL results with a repeatable classification process based on theoretical mode shapes and statistical curve fitting.
 
-### Background
+## Background
 HBAR devices support a large number of closely spaced mechanical resonances, many of which are not useful operating modes. Although COMSOL can accurately calculate these eigenmodes, determining which modes exhibit true HBAR behavior traditionally requires manual inspection of displacement profiles.
 
 {% include image-gallery.html images="base_model.png" height="300" %}
@@ -26,7 +26,7 @@ To eliminate this bottleneck, I developed a MATLAB-based characterization workfl
 {% include image-gallery.html images="example_hbar.png" height="300" %}
 <span style="font-size: 10px">Example HBAR mode vs. non-HBAR mode</span>
 
-### Predicting Candidate Resonances
+## Predicting Candidate Resonances
 The workflow begins by calculating the theoretical resonance frequencies associated with a specified range of longitudinal overtone numbers. These predicted frequencies serve as reference points for automated COMSOL eigenfrequency searches.
 
 Rather than searching across the entire frequency spectrum, the simulation performs localized searches around each theoretical resonance, significantly reducing computational cost while ensuring that nearby HBAR modes are captured.
@@ -34,7 +34,7 @@ Rather than searching across the entire frequency spectrum, the simulation perfo
 {% include image-gallery.html images="theory_console.png" height="300" %}
 <span style="font-size: 10px">Example theoretical frequency locations</span>
 
-### Extracting Mode Profiles
+## Extracting Mode Profiles
 Each eigenfrequency search returns multiple mechanical eigenmodes. For every mode identified, the radial displacement profile is extracted along a cut line through the substrate.
 
 This one-dimensional displacement profile captures the transverse shape of the mechanical mode and serves as the input for the characterization algorithm implemented in MATLAB.
@@ -42,7 +42,7 @@ This one-dimensional displacement profile captures the transverse shape of the m
 {% include image-gallery.html images="cutline_location.png" height="300" %}
 <span style="font-size: 10px">Cutline location in subtrate</span>
 
-### Hermite-Gaussian Curve Fitting
+## Hermite-Gaussian Curve Fitting
 The exported displacement profile is compared against a library of theoretical transverse mode distributions, dictated by mathematical Hermite-Gaussian models.
 
 {% include image-gallery.html images="example_curves.png" height="300" %}
@@ -55,7 +55,7 @@ A custom nonlinear least-squares fitting routine determines the optimal amplitud
 
 This approach provides an objective method for distinguishing HBAR modes from spurious mechanical resonances while simultaneously verifying that the transverse mode order is found roughly in the expected location.
 
-### Automated HBAR Classification
+## Automated HBAR Classification
 After evaluating every candidate distribution, the workflow selects the model with the highest goodness-of-fit. Modes whose best-fit R² exceeds a predefined threshold are automatically classified as HBAR candidates.
 
 {% include image-gallery.html images="workflow.png" height="300" %}
