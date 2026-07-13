@@ -6,7 +6,7 @@ skills:
 - MATLAB
 - COMSOL
 - LiveLink
-main-image: /vaisala_cover.png 
+main-image: /hbar_cover.png 
 ---
 
 ---
