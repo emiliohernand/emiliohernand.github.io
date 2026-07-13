@@ -92,7 +92,7 @@ The beam waist (w0​) and beam radius at the dome surface (w2) can be calculate
 {% include image-gallery.html images="workflow2.png" height="300" %}
 <span style="font-size: 10px">Parameter influence path</span>
 
-To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, 4 colormap graphs were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
+To visualize how the geometry parameters relate to each other and what acceptable substrate composition might look like, 4 colormap plots were produced in MATLAB based on an aperture range of 1 to 300 μm and a sag range of 0.05 to 1 μm, each showcasing a different optimization feature.
 
 ### Map 1 – Resonator Stability
 Goal: Determine which substrate geometries can theoretically support stable Gaussian HBAR modes at 4 GHz.
@@ -163,3 +163,8 @@ All four geometric configurations produced effecitve, well-confined HBAR modes. 
 
 {% include image-gallery.html images="config_modes.png" height="300" %}
 <span style="font-size: 10px">Example HBAR modes found for each geometric configuration (all 0th order)</span>
+
+### Next Steps
+The geometry optimization maps and their respective simulation tests help inform the future design of a final HBAR device to be manufactured by fellow lab members, and the characterization workflow for identifying desirable eigenmodes will enable us to couple the device with optical components at the correct wave frequecies. 
+
+By integrating COMSOL with MATLAB for automation, numerical optimization, and data visualization, the project significantly reduced manual analysis effort and accelerated the overall device design process.
