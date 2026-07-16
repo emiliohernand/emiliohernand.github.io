@@ -75,7 +75,7 @@ The entire characterization process was integrated into a hierarchical MATLAB fr
 Develop simulation tools to investigate how substrate geometry influences HBAR resonance behavior and identify device dimensions that improve mode confinement while maintaining practical operating frequencies.
 
 ## Background
-After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance. Two geometric design parameters define the dome:
+After establishing an automated method for identifying HBAR modes, the next step was to determine how device geometry affects their performance. Assuming the material properties of the sapphire substrate are held constant, two geometric design parameters become key in defining wave propagation:
 - Aperture (a) – the half-width of the domed region
 - Sag (sag) – the height of the dome above the substrate
 
@@ -85,7 +85,7 @@ After establishing an automated method for identifying HBAR modes, the next step
 Because changing substrate dimensions alters both resonance frequencies and mode behavior, manually evaluating hundreds of possible geometries would be impractical.
 
 ## Theory Constraints
-For a resonator to produce stable Gaussian displacement fields, we depend on a stability range of... 0 < g < 1
+For example a resonator to produce stable Gaussian displacement fields, we depend on a stability range of... 0 < g < 1
 
 The beam waist (w0​) and beam radius at the dome surface (w2) can be calculated analytically. To minimize leakage, the beam must remain well confined beneath the dome. This work uses the semi-arbitrary criterion... a / w2 ≥ 3
 
